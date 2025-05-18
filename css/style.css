@@ -3,19 +3,12 @@
     font-size: 2rem;
 }
 
-/* Contenedor de los campos del formulario con margen y espaciado en grilla */
+/* Contenedor de los campos del formulario con margen y espaciado */
 .form-inputs {
     margin: 2rem 0 1.5rem; 
     display: grid;         
     gap: 1.5rem;           
-    color: #383434;        
-}
-
-/* Contenedor del input y el texto flotante, superpuestos en la misma área */
-.form-label {
-    width: 100%;                    
-    display: grid;                 
-    grid-template-areas: "input";  
+    color: #3a2525;        
 }
 
 /* Campo de entrada de texto (input) con diseño moderno */
@@ -23,39 +16,37 @@
     grid-area: input;            
     width: 100%;                 
     border-radius: 10px;          
-    border: 1px solid #d7d0d0;  
+    border: 1px solid #774040;  
     padding: .9rem 1.5rem;        
 }
 
-/* Texto flotante (label) que se superpone al input */
-.form-text {
-    grid-area: input;            
-    z-index: 100;                
-    width: max-content;         
-    height: 100%;                
-    margin-left: 1rem;           
-    padding: 0 .5rem;            
-    display: flex;               
-    transform-origin: left center; 
-    transition: transform .3s;    
-}
-
-/* Animación del texto flotante al enfocar el input o al escribir */
-.form-input:focus + .form-text, 
-.form-input:not(:placeholder-shown) + .form-text {
-    background-color: white;          
-    transform: translateY(-50%) scale(.7); /* se eleva y reduce de tamaño */
-}
-
 /* Botón de envío del formulario */
-.form-submit {
-    display: inline-block;        
+.form-submit {     
     border-radius: 10px;          
     background-color: rgb(115, 58, 58);   
     padding: .9rem 2.5rem;       
-    border: 2px solid rgb(240, 231, 231); 
     color: rgb(255, 242, 242);                 
     font-size: 17px;              
 }
 
+.error-text {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 2px;
+    display: none;
+}
 
+.form-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-input.invalid {
+    border: 1px solid red;
+}
+
+.form-label span {
+    margin-bottom: 5px;
+    font-weight: bold;
+}

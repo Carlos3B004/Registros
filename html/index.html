@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/style.css">
-        <title>Formulario</title>
-    </head>
-    <body>
-        <form class="form">
-            <h2 class="form-title">Registro para Clientes</h2>
-            <div class="form-inputs">
-                <label class="form-label">
-                    <input type="text" placeholder=" " class="form-input" autofocus required>
-                    <span class="form-text">Cédula</span>
-                </label>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Formulario</title>
+</head>
+<body>
+  <form class="form" id="formularioCliente" novalidate>
+    <h2 class="form-title">Registro para Clientes</h2>
+    <div class="form-inputs">
 
-                <label class="form-label">
-                    <input type="text" placeholder=" " class="form-input" required>
-                    <span class="form-text">Nombres</span>
-                </label>
+      <label class="form-label">
+        <span>Nombres</span>
+        <input type="text" id="nombre" class="form-input" required />
+        <span class="error-text" id="error-nombre"></span>
+      </label>
 
-                <label class="form-label">
-                    <input type="tel" placeholder=" " class="form-input" required>
-                    <span class="form-text">Apellidos</span>
-                </label>
+      <label class="form-label">
+        <span>Apellidos</span>
+        <input type="text" id="apellidos" class="form-input" required />
+        <span class="error-text" id="error-apellidos"></span>
+      </label>
 
-                <label class="form-label">
-                    <input type="email" placeholder=" " class="form-input" required>
-                    <span class="form-text">Correo electrónico</span>
-                </label>
+      <label class="form-label">
+        <span>Cédula</span>
+        <input type="text" id="cedula" class="form-input" required />
+        <span class="error-text" id="error-cedula"></span>
+      </label>
 
-                <label class="form-label">
-                    <input type="text" placeholder=" " class="form-input" required>
-                    <span class="form-text">Dirección</span>
-                </label>
+      <label class="form-label">
+        <span>Correo electrónico</span>
+        <input type="email" id="email" class="form-input" required />
+        <span class="error-text" id="error-email"></span>
+      </label>
 
-                <label class="form-label">
-                    <input type="text" placeholder=" " class="form-input" required>
-                    <span class="form-text">Cuidad</span>
-                </label>
-            </div>
-            <input type="submit" value="Registrar Cliente" class="form-submit">
-        </form>
-    </body>
+      <label class="form-label">
+        <span>Dirección</span>
+        <input type="text" id="direccion" class="form-input" required />
+        <span class="error-text" id="error-direccion"></span>
+      </label>
+
+      <label class="form-label">
+        <span>Ciudad</span>
+        <input type="text" id="ciudad" class="form-input" required />
+        <span class="error-text" id="error-ciudad"></span>
+      </label>
+
+      <label class="form-label">
+        <span>Teléfono</span>
+        <input type="text" id="telefono" class="form-input" required />
+        <span class="error-text" id="error-telefono"></span>
+      </label>
+    </div>
+
+    <input type="submit" value="Registrar Cliente" class="form-submit" />
+  </form>
+
+  <script src="../js/register.js"></script>
+</body>
 </html>
